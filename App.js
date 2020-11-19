@@ -18,21 +18,19 @@ const App = () => {
   const addTodo = () => {
     setTodos([input, ...todos]);
     setInput('');
-  };
+  }
 
   return (
     <SafeAreaView>
       <View>
-        <Text style={styles.titleText}>A simple React Native Todo App</Text>
+        <Text style={styles.titleText}>React Native Todo App</Text>
       </View>
       <ScrollView>
-        <View>
-          {todos.map((todo) => (
-            <Todo style={styles.todoText} title={todo} />
-          ))}
-        </View>
+      {todos.map((todo) => (
+        <Todo style={styles.todoText} title={todo} />
+      ))}
       </ScrollView>
-
+      
       <TextInput
         style={styles.todoInput}
         value={input}
@@ -53,13 +51,14 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 30,
     margin: 20,
+    textAlign: 'center'
   },
   todoText: {
-    margin: 20,
+    margin: 20
   },
   button: {
-    width: '50%',
-  },
+    width: '50%'
+  }
 });
 
 export default App;
