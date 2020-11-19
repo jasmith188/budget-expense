@@ -7,7 +7,6 @@ import {
   Text,
   TextInput,
   Button,
-  ScrollView,
 } from 'react-native';
 import Todo from './Todo';
 
@@ -23,20 +22,21 @@ const App = () => {
   return (
     <SafeAreaView>
       <View>
-        <Text style={styles.titleText}>React Native Todo App</Text>
+        <Text style={styles.titleText}> 🍎🍌 Gr🍊cery List 🥑🥕   </Text>
       </View>
-      <ScrollView>
+      <View>
       {todos.map((todo) => (
+        
         <Todo style={styles.todoText} title={todo} />
       ))}
-      </ScrollView>
+      </View>
       
       <TextInput
         style={styles.todoInput}
         value={input}
         onChangeText={(text) => setInput(text)}
       />
-      <Button style={styles.button} title="Add TODO" onPress={addTodo} />
+      <Button style={styles.appButtonText} title="Add To List" onPress={addTodo} />
     </SafeAreaView>
   );
 };
@@ -49,16 +49,19 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   titleText: {
-    fontSize: 30,
+    paddingTop: 80,
+    fontSize: 50,
     margin: 20,
     textAlign: 'center'
   },
   todoText: {
-    margin: 20
+    textAlign: 'center'
   },
-  button: {
-    width: '50%'
+  appButtonText: {
+    // textTransform: 'none'
+    fontWeight: "bold"
   }
+    
 });
 
 export default App;
