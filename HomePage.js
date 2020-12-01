@@ -23,8 +23,9 @@ const styles = StyleSheet.create({
   },
   titleText: {
     // backgroundColor: 'red',
-    fontSize: 30,
+    fontSize: 40,
     fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
 
@@ -126,9 +127,10 @@ const HomePage = ({navigation}) => {
   return (
     <SafeAreaView>
       <View>
-        <Text style={styles.titleText}>Budget Expense 🚀 🚀 🚀</Text>
+        <Text style={styles.titleText}>Budget Expense</Text>
       </View>
       <Button title='Login' onPress={() => navigation.navigate('Login')} />
+
       <View>
         <Text>Bezier Line Chart</Text>
         <LineChart
